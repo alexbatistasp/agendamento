@@ -3,6 +3,7 @@ package br.com.batistacorp.agendamento.controller;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ public class AgenciaController {
 	
 	@Autowired
 	private AgenciaDAO dao;
+	@CrossOrigin(origins="*")
 	@GetMapping("/agencias")
 	public ArrayList<Agencia> reperarTodas(){
 		ArrayList<Agencia> lista; //declarei a lista
